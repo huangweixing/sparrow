@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=9" >
+<meta http-equiv="x-ua-compatible" content="IE=8" >
+<meta http-equiv="x-ua-compatible" content="IE=7" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="css/innovate.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/kuCity.css"/>
+  <title>Document</title>
+  <style>
+  .kucity{
+    background-color: #fff;
+  }
+  </style>
+</head>
+<body>
+  <div class="Top_Navs">
+  	<div class="Nav_cs">
+      	<a><img src="images/logo_03.png"></a>
+    </div>
+      <div class="activity_bm">
+        <h2>活动报名</h2>
+        <p>请按要求填写下列信息，感谢您的参与</p>
+      </div>
+  <div class="container">
+    <form>
+        <table>
+            <tr>
+              <td></td>
+              <td>姓名<img src="./images/wjx_03.png" alt=""></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input placeholder="姓名" type="text" id="t1"/></td>
+            </tr>
+            <tr class="hint" id="h1">
+                <td></td>
+                <td id="c1">必填，长度为4~16位字符</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>微信号<img src="./images/wjx_03.png" alt=""></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input name="fullname" maxlength="20" placeholder="微信号" type="text" id="t2"/></td>
+            </tr>
+            <tr class="hint" id="h2">
+                <td></td>
+                <td id="c2">必填，长度为6~20位字符,包含字母和数字</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>手机<img src="./images/wjx_03.png" alt=""></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input name="fullname" maxlength="11" placeholder="手机" type="password" id="t3"/></td>
+            </tr>
+            <tr class="hint" id="h3">
+                <td></td>
+                <td id="c3">必填，必须11位</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>邮箱<img src="./images/wjx_03.png" alt=""></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input placeholder="邮箱" type="text" id="t4"/></td>
+            </tr>
+            <tr class="hint" id="h4">
+                <td></td>
+                <td id="c4">填写正确的邮箱格式</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>所在城市</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input class="search" type="text" id="t5"/></td>
+            </tr>
+            <tr class="hint" id="h5">
+                <td></td>
+                <td id="c5"></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>行业<img src="./images/wjx_03.png" alt=""></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input placeholder="行业" type="text" id="t6"/></td>
+            </tr>
+            <tr class="hint" id="h6">
+                <td></td>
+                <td id="c6"></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>为什么想要参与这次讲座</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><textarea class="hint-item" name="" id="t7" cols="30" rows="10"></textarea></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><a href=""><div id="submit" class="activity_footers">提交</div></a></td>
+            </tr>
+        </table>
+    </form>
+  </div>
+      <!-- <a href=""><div class="activity_footer">提交</div></a> -->
+  </div>
+  <script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/kuCity.js"></script>
+  <script>$('.search').kuCity();</script>
+  <!-- <script type="text/javascript">
+  (function(){
+    var hintText=[{hint:"必填，长度为4~16位字符",right:"名称格式正确",wrong:"名称格式有误",isPassed:false},
+                {hint:"必填，长度为4~16位字符,包含字母和数字",right:"格式正确",wrong:"格式有误",isPassed:false},
+                {hint:"必填，长度为4~16位数字",right:"账号正确",wrong:"账号错误",isPassed:false},
+                {hint:"填写正确的邮箱格式",right:"邮箱格式正确",wrong:"邮箱格式错误",isPassed:false},
+                {hint:"必填",right:"正确",wrong:"错误",isPassed:true},
+                {hint:"必填",right:"正确",wrong:"错误",isPassed:true}];
+
+
+    var regEvent=function(node, event, func){
+        if (node.addEventListener)
+            node.addEventListener(event, func);
+        else if (node.attachEvent)
+            node.attachEvent("on" + event, func);
+        else
+            node["on" + event] = func;
+    };
+    function regValue(id){
+              var flag=false;
+              var input=document.getElementById("t"+id);
+              var hint=document.getElementById("h"+id);
+              var content=document.getElementById("c"+id);
+              var value=input.value;
+              switch (parseInt(id)){
+                  case 1:
+                      flag=/^([\u4e00-\u9fa5]){2,7}$/.test(value);
+                      break;
+                  case 2:
+                      flag=/^[a-zA-Z]{1}[-_a-zA-Z0-9]{5,19}$/.test(value);
+                      break;
+                  case 3:
+                      flag=/^[1][0-9]{10}$/.test(value);
+                      break;
+                  case 4:
+                      flag=/^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}/.test(value);
+                      break;
+                  case 5:
+                      flag=/^([\u4e00-\u9fa5]){2,7}$/.test(value);
+                      break;
+                  case 6:
+                      flag=/^[a-zA-Z0-9_]{4,16}$/.test(value.replace(/[\u0391-\uFFE5]/g,"nn"));
+                      break;
+              }
+                  if(flag) {
+                      input.style.borderColor = "green";
+                      hint.className="right";
+                      content.innerHTML=hintText[id-1].right;
+                      hintText[id-1].isPassed=false;
+                  }else{
+                      input.style.borderColor = "red";
+                      hint.className="wrong";
+                      content.innerHTML=hintText[id-1].wrong;
+                      hintText[id-1].isPassed=true;
+                  }
+          };
+          var inputs=document.getElementsByTagName("input");
+          [].forEach.call(inputs,function(v){
+              var id=v.getAttribute("id").slice(1);
+              var hintID="h"+v.getAttribute("id").slice(1);
+              regEvent(v,"focus",function(){
+                  document.getElementById(hintID).style.display="table-row";
+              });
+              regEvent(v,"blur",function(){regValue(id)});
+          });
+
+          regEvent(document.getElementById("submit"),"click",function(e){
+              e.preventDefault();
+
+              [1,2,3,4,5,6].forEach(function(v){
+                  regValue(v);
+              });
+              var flag=hintText.every(function(v){
+                 return v.isPassed;
+              });
+              if(flag)
+                  alert("提交成功");
+              else
+                  alert("提交失败");
+          });
+      })();
+
+  </script> -->
+</body>
+</html>

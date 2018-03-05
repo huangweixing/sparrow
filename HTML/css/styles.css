@@ -1,0 +1,28 @@
+
+.banner{
+		width: 100%;
+		margin: 0 auto;
+		position: absolute;
+		cursor: pointer;
+		overflow: hidden;
+	}
+	.banner ul{
+		float: left;
+	} 
+	.banner ul li{
+		width: 100%;
+		float: left;
+		/*transition:  1s;*/
+	}
+	ul li img{
+		width: 100%;
+		float: left;
+	}
+	/*.banner ul li:hover{
+		transform: scale(1.04);
+		transition:  1s;
+	}
+	ul li.j{
+		transform: scale(1.04);
+		transition:  3s;
+	}*/

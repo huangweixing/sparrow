@@ -1,0 +1,14 @@
+*{margin: 0;
+padding: 0;}
+.CK_nav a {
+    width: 222px;
+    height: 30px;
+    padding: 10px 0;
+    border: 1px solid #ccc;
+    background: #fff;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    margin: 20px 100px 0 82px;
+    color: #555;
+}

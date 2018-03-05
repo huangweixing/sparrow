@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=9" >
+  <meta http-equiv="x-ua-compatible" content="IE=8" >
+  <meta http-equiv="x-ua-compatible" content="IE=7" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="css/innovate.css" type="text/css" rel="stylesheet" />
+  <link href="css/lj_enroll.css" type="text/css" rel="stylesheet" />
+  <title>Document</title>
+  <style>
+  table td {
+  padding: 0 auto;
+  text-align: center;
+  padding-top: 80px;
+}
+label {
+    margin-left: 60px;
+}
+  </style>
+</head>
+<body>
+  <div class="Top_Navs">
+    <div class="Nav_cs">
+      <a><img src="images/logo_03.png"></a>
+    </div>
+      <div class="activity_bms">
+        <h2>扁鹊社创业项目申请表</h2>
+        <p>感谢您申请加入扁鹊社创业项目，请登记您的项目信息</p>
+      </div>
+    <div class="container">
+        <form>
+            <table>
+                <tr>
+                    <td><label>姓名<img src="./images/wjx_03.png" alt=""></label></td>
+                    <td><input type="text" id="t1"/></td>
+                </tr>
+                <tr class="hint" id="h1">
+                    <td></td>
+                    <td id="c1">必填，长度为4~16位字符</td>
+                </tr>
+                <tr>
+                    <td><label>手机<img src="./images/wjx_03.png" alt=""></label></td>
+                    <td><input type="text" name="fullname" maxlength="11" id="t2"/></td>
+                </tr>
+                <tr class="hint" id="h2">
+                    <td></td>
+                    <td id="c2">填写正确的手机号码</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><div class="activity_xz"><a href=""><img src="./images/jt_03.png" alt=""><h2>点击下载报名表</h2></a></div></td>
+                </tr>
+                <tr>
+                  <td></td>
+                    <td><a href=""><div id="submit" class="activity_footers">提交</div></a>
+                    <div class="activity_lx"><p>联系手机：0791-85771225</p><p>联系邮箱：zyyscds@163.com</p></div></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+  </div>
+  <!-- <script type="text/javascript">
+  (function(){
+    var hintText=[{hint:"必填，长度为4~16位字符",right:"名称正确",wrong:"名称有误",isPassed:false},
+                {hint:"必填，长度为4~16位数字",right:"账号正确",wrong:"账号错误",isPassed:false}];
+
+    var regEvent=function(node, event, func){
+        if (node.addEventListener)
+            node.addEventListener(event, func);
+        else if (node.attachEvent)
+            node.attachEvent("on" + event, func);
+        else
+            node["on" + event] = func;
+    };
+    function regValue(id){
+              var flag=false;
+              var input=document.getElementById("t"+id);
+              var hint=document.getElementById("h"+id);
+              var content=document.getElementById("c"+id);
+              var value=input.value;
+              switch (parseInt(id)){
+                  case 1:
+                      flag=/^([\u4e00-\u9fa5]){2,7}$/.test(value);
+                      break;
+                  case 2:
+                      flag=/^[a-zA-Z0-9_]{4,16}$/.test(value.replace(/[\u0391-\uFFE5]/g,"nn"));
+                      break;
+              }
+                  if(flag) {
+                      input.style.borderColor = "green";
+                      hint.className="right";
+                      content.innerHTML=hintText[id-1].right;
+                      hintText[id-1].isPassed=false;
+                  }else{
+                      input.style.borderColor = "red";
+                      hint.className="wrong";
+                      content.innerHTML=hintText[id-1].wrong;
+                      hintText[id-1].isPassed=true;
+                  }
+          };
+          var inputs=document.getElementsByTagName("input");
+          [].forEach.call(inputs,function(v){
+              var id=v.getAttribute("id").slice(1);
+              var hintID="h"+v.getAttribute("id").slice(1);
+              regEvent(v,"focus",function(){
+                  document.getElementById(hintID).style.display="table-row";
+              });
+              regEvent(v,"blur",function(){regValue(id)});
+          });
+
+          regEvent(document.getElementById("submit"),"click",function(e){
+              e.preventDefault();
+
+              [1,2].forEach(function(v){
+                  regValue(v);
+              });
+              var flag=hintText.every(function(v){
+                 return v.isPassed;
+              });
+              if(flag)
+                  alert("提交失败");
+              else
+                  alert("提交成功");
+          });
+      })();
+  </script> -->
+</body>
+</html>

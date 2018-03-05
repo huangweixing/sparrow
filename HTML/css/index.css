@@ -1,0 +1,38 @@
+*{margin: 0;
+padding: 0;}
+.expert {
+    margin-bottom: 20px;
+    border-bottom: 1.5px solid #ea5504;
+    margin-top: 30px;
+}
+.R_List .Rela a{color: #000;}
+.R_List .more{padding-left: 220px;}
+.BQS_rt {
+    width: 80px;
+    height: 21px;
+    border-radius: 5px 5px 0 0;
+    background: url(../images/r_ti_0.gif) no-repeat;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    padding: 0 0 10px;
+}
+
+.Nav_2 a.on {
+    color: #fff;
+}
+.Right_se font a{
+  position: relative;
+}
+.Right_se .adk {
+  display: none;
+  position: absolute;
+  right: 1px;
+}
+.Right_se font a:hover .adk {
+  margin-top: 20px;
+  z-index: 2;
+  width: 140px;
+  height: 148px;
+  display: block;
+}

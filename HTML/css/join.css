@@ -1,0 +1,4 @@
+*{margin: 0;
+padding: 0;}
+.join .contains {    margin: 10px 0px 0px 18px;display: inline-flex;width: 400px;height: 180px; padding-left: 6px; margin-top: 10px; line-height:28px; font-size:14px;}
+.join .contains .lists{background-color: #e9eaec;font-size: 10px;padding: 20px;}
